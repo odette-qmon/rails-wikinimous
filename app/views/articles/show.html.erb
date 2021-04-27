@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-light">
+  <h3>Wikinimous</h3>
+  <%= link_to 'New Article', new_article_path %>
+</nav>
+<div class="container">
+  <div class="">
+    <article>
+      <h3>
+        <%= @article.title %>
+        <small>
+          <%= link_to 'Edit', edit_article_path %>
+          <%= link_to 'Delete', article_path(@article), method: :delete %>
+        </small>
+      </h3>
+      <hr>
+      <%= @article.content %>
+    </article>
+  </div>
+</div>
